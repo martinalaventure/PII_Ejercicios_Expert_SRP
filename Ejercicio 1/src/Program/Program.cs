@@ -25,9 +25,7 @@ namespace SRP
             sector2.AddShelve(shelve2);
             
             Console.WriteLine($"The book is named {book1.Title}, it was written by {book1.Author}, its code is {book1.Code}");
-            Console.WriteLine($"It can be found in the shelve {shelve1.Shelveid} which is in the sector {sector1.Sectorid}\n");
-
-            shelve1.DisplayBooks();
+            Console.WriteLine($"It can be found in the shelve {shelve1.Shelveid} which is in the sector {sector1.Sectorid}");
         }
     }
 }
