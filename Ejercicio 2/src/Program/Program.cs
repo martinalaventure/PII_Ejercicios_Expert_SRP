@@ -5,13 +5,21 @@ namespace Program
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            string appointmentResult = AppointmentService.CreateAppointment("Steven Jhonson", "986782342", "5555-555-555", DateTime.Now, "Wall Street", "Armand");
-            Console.WriteLine(appointmentResult);
+            Appointment appointment = new Appointment
+            {
+                name = "Martina Laventure",
+                id = "5571876-9",
+                phoneNumber = "098994321",
+                date= DateTime.Now,
+                appointmentPlace = "Clinic A",
+                doctorName = "Jorge Ruiz"
+            };
+            AppointmentScheduler scheduler = new AppointmentScheduler();
+            string result = scheduler.ScheduleAppointment(appointment);
 
-            string appointmentResult2 = AppointmentService.CreateAppointment("Ralf Manson", "", "5555-555-555", DateTime.Now, "Queen Street", "");
-            Console.WriteLine(appointmentResult2);
+            Console.WriteLine(result);
         }
     }
 }
