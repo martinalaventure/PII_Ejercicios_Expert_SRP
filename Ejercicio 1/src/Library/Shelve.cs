@@ -16,14 +16,5 @@ namespace SRP
         {
             BooksList.Add(book);
         }
-        public void DisplayBooks()
-        {
-            Console.WriteLine($"Books that can be found on the shelve {Shelveid}:");
-            foreach (var book in BooksList)
-            {
-                Console.WriteLine(book.Title);
-            }
-
-        }
     }
 }
