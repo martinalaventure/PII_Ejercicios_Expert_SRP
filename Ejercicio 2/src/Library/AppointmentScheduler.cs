@@ -5,11 +5,11 @@ namespace Library
 {
     public class AppointmentScheduler
     {
-        public string ScheduleAppointment(Appointment appointment)
+        public string ScheduleAppointment(Patient patient, Doctor doctor, Appointment appointment, Validation validation)
         {
-            if (appointment.isValid())
+            if (validation.IsValid(patient,appointment,doctor))
             {  
-                return "Appointment scheduled";;
+                return "Appointment scheduled";
             }  
             else
             {
